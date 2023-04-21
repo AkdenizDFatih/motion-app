@@ -1,25 +1,22 @@
 name: backend
 
 dependencies:
-  - python=3.6
-  - psycopg2
+  - python=3.11.3
+  - psycopg2=2.9.3
   - pip:
-    - Django==2.2.2
-    - flake8
-    - djangorestframework==3.9.4
-    - markdown==3.1.1
-    - django-filter==2.1.0
-    - djangorestframework_simplejwt==4.3.0
+    - beautifulsoup4==4.12.2
     - coreapi==2.3.3
-    - Pygments==2.4.2
-    - gunicorn
-    - Pillow
-    - django-cors-headers
-    - pywebcopy
-    - beautifulsoup4==4.7.1
-    - django-cors-headers
-    - webpreview==1.6.0
-    - django-extensions==2.2.5
-    - django-fullurl==1.0
-
-
+    - Django==4.2
+    - django-cors-headers==3.14.0
+    - django-extensions==3.2.1
+    - django-filter==23.1
+    - django-fullurl==1.4
+    - djangorestframework==3.14.0
+    - djangorestframework_simplejwt
+    - flake8==6.0.0
+    - gunicorn==20.1.0
+    - markdown==3.4.3
+    - Pygments==2.15.1
+    - Pillow==9.5.0
+    - pywebcopy==7.0.2
+    - webpreview==1.7.2

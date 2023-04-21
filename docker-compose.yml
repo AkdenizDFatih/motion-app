@@ -15,10 +15,9 @@ services:
     restart: always
     env_file:
       - ./envs/dev.env
-    command: '/usr/sbin/sshd -D'
+    command: "sh /scripts/dev.sh"
     ports:
       - '8000:8000'
-      - '4777:22'
     depends_on:
       - postgres
     volumes:
