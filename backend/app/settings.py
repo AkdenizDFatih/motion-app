@@ -162,3 +162,5 @@ EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 AUTH_USER_MODEL = 'users.User'
 
 FILE_UPLOAD_PERMISSIONS = 0o644
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
