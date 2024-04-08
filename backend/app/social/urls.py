@@ -1,10 +1,12 @@
-from django.urls import path, include
 from app.social.views.comments import ListCreateComment
 from app.social.views.followers import ListFollowers, ListFollowing, FollowUnfollowUser
 from app.social.views.friends import CreateFriendRequest, RetrieveUpdateDestroyFriendRequest, ListFriends, \
     ListFriendRequests
 from app.social.views.posts import ListCreatePosts, RetrieveUpdateDestroyPost, ListPostsUser, ListPostsLoggedInUser, \
     ListPostsFollowees, ListLikes, CreateLike, ListFriendsPosts
+from django.urls import path, include
+
+# defining all urls in one file, but structuring in various xxx_patterns lists and then importing ...
 
 post_patterns = [
     path('', ListCreatePosts.as_view(), name='list-create-posts'),
@@ -34,6 +36,9 @@ friend_patterns = [
     path('requests/', ListFriendRequests.as_view(), name='list-friend-request'),
     path('', ListFriends.as_view(), name='list-friends'),
 ]
+
+# ... importing them here. This urlpatterns list is the one being used and imported in the project url.py
+# The patterns created above are then included in this urlpatterns
 
 urlpatterns = [
     path('posts/', include(post_patterns)),

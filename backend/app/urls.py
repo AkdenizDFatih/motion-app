@@ -4,6 +4,7 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework.documentation import include_docs_urls
 
+# To keep it clean we define an api_patterns list here, and include the url.pys from various apps
 api_patterns = [
     path('users/', include('app.users.urls')),
     path('social/', include('app.social.urls')),
@@ -15,6 +16,7 @@ api_patterns = [
 
 urlpatterns = [
     path('backend/admin/', admin.site.urls),
+    # here we use the api_patterns we defined above and include it in our main endpoint
     path('backend/api/', include(api_patterns)),
 ]
 
